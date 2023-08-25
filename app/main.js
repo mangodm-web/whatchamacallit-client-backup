@@ -14,13 +14,13 @@ export default function MainScreen() {
       <SafeAreaView className="flex-1 flex mx-5">
         <Avatar />
         <View className="space-y-2 p-4 mt-1 bg-white border border-slate-300 rounded-lg">
-          <Text className="text-center">Hello, how can I assist you?</Text>
+          <Text className="text-center">Hello, what's on your mind?</Text>
         </View>
         {SAMPLE_QUESTION_ANSWERS &&
           SAMPLE_QUESTION_ANSWERS.length !== NUMBER.EMPTY_ARRAY_LENGTH && (
             <View className="space-y-3 mt-2">
-              <Text className="text-lg text-gray-700 font-semibold">
-                Here are some examples
+              <Text className="mt-4 text-md text-gray-700 font-semibold">
+                Need inspiration? See these examples:
               </Text>
               {SAMPLE_QUESTION_ANSWERS.map((questionAnswer) => {
                 const { id, description, answer } = questionAnswer;
@@ -43,7 +43,7 @@ export default function MainScreen() {
         <View className="flex-row justify-center">
           <Pressable
             onPress={() => router.push("/recording")}
-            className="w-40 p-3 mt-3 bg-gray-200 rounded-full"
+            className="w-40 p-3 mt-5 bg-gray-200 rounded-full"
           >
             <Text className="text-center">
               <FontAwesome5 name="microphone" size={24} color="black" />
